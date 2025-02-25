@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
@@ -15,10 +16,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">barang</a>
+          <a class="nav-link active" aria-current="page" href="../barang/index.php">barang</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">jenis</a>
+          <a class="nav-link" href="../jenis/index.php">jenis</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -41,12 +42,12 @@
 <br>
     <div class="container">
          <h1>Data Jenis</h1>
-    
-    <br><br/>
+    <br>
+    <a class="btn btn-primary" href="view_tambah.php" role="button"><i class="fa-solid fa-circle-plus"></i> Tambah</a>
+    <br>
     <table class="table table-striped table-bordered ">
-    <a class="btn btn-primary" href="view_tambah.php" role="button">Tambah</a>
   <tr>
-            <th>id_jenis</th>
+            <th>id jenis</th>
             <th>nama</th>
             <th>aksi</th>
         </tr>
@@ -60,8 +61,8 @@
                         <td><?php echo $result['id_jenis'];?></td>
                         <td><?php echo $result['nama'];?></td>
                         <td>
-                            <a href="<button type="button class="btn btn-danger"></button>Edit</a>
-                            <a href="<button type="button class="btn btn-warning"></button>Hapus</a>
+                            <a href="edit.php?id_jenis=<?php echo $result['id_jenis']?>"
+                            class="btn btn-warning"><i class="fa-duotone fa-regular fa-pen-to-square"></i> edit<a>
                         </td>
                 </tr>
                 <?php
